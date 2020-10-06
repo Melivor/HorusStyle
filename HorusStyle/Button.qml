@@ -12,7 +12,7 @@ T.Button {
     implicitHeight: 40
     implicitWidth: 100
     property color color: down?Qt.darker(HorusTheme.backgroundColor,1.2):HorusTheme.backgroundColor
-    property color textColor: down?Qt.darker(HorusTheme.textColor,1.2):highlighted?HorusTheme.textLightColor:HorusTheme.textColor
+    property color textColor: down?Qt.darker(palette.text,1.2):highlighted?HorusTheme.textLightColor:palette.text
     property color borderColor:  hovered?HorusTheme.highlightedBorderColor:HorusTheme.borderColor
     contentItem:Item{
 //        anchors.fill: button

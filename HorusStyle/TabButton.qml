@@ -17,7 +17,7 @@ T.TabButton{
     contentItem:Item{ Text{
         anchors.centerIn: parent
         text:tabButton.text
-        color:tabButton.checked?HorusTheme.textColor:HorusTheme.textLightColor
+        color:tabButton.checked?palette.text:HorusTheme.textLightColor
     }
     }
 

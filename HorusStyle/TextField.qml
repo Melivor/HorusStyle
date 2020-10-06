@@ -18,9 +18,11 @@ T.TextField {
     rightPadding: padding - 4
     bottomPadding: padding - 5
     verticalAlignment: TextInput.AlignVCenter
+    placeholderTextColor: HorusTheme.textLightColor
     PlaceholderText {
         id: placeholder
-        x: control.leftPadding
+        //anchors.right:control.right
+        x: control.rightPadding
         y: control.topPadding
         width: control.width - (control.leftPadding + control.rightPadding)
         height: control.height - (control.topPadding + control.bottomPadding)
@@ -28,6 +30,7 @@ T.TextField {
         text: control.placeholderText
         font: control.font
         color: control.placeholderTextColor
+        //visible: true
         visible: !control.length && !control.preeditText && (!control.activeFocus || control.horizontalAlignment !== Qt.AlignHCenter)
         verticalAlignment: control.verticalAlignment
         elide: Text.ElideRight

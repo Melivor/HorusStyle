@@ -13,5 +13,6 @@
         <file>HorusStyle/TextField.qml</file>
         <file>import/HorusTheme.qml</file>
         <file>import/qmldir</file>
+        <file>HorusStyle/Popup.qml</file>
     </qresource>
 </RCC>

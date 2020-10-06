@@ -11,7 +11,7 @@ QtObject{
     property color accentColor:Qt.hsla(0,0,75/255,1)
     property color disableAccentColor:Qt.lighter(Qt.hsla(0,0,75/255,1),0.1)
     property color accentColorDisabled: Qt.hsla(0,0,150/255,1)
-    property color textColor: Qt.hsla(0,0,75/255,1)
+    //property color textColor: Qt.hsla(0,0,75/255,1) use palette.text
     property color textLightColor:Qt.hsla(0,0,150/255,1)
     property color textLightColorDisable:"light grey"
     property color standardRed:"indianred"

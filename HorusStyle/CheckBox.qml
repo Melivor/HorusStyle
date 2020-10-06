@@ -12,7 +12,7 @@ T.CheckBox {
         id:text
         text: control.text
         font: control.font
-        color: HorusTheme.textColor
+        color: palette.text
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignRight
         width: contentWidth!==0?control.indicator.implicitWidth+contentWidth+10:control.indicator.implicitWidth

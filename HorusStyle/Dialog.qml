@@ -20,7 +20,7 @@ T.Dialog {
             anchors.verticalCenter: parent.verticalCenter
             text:dialog.title
             font.bold: true
-            color:HorusTheme.textColor
+            color:palette.text
         }
         height: 30
     }
