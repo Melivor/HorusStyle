@@ -1,0 +1,2 @@
+module HorusTheme
+singleton HorusTheme 1.0 HorusTheme.qml

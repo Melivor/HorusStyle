@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>HorusStyle/Button.qml</file>
+        <file>HorusStyle/CheckBox.qml</file>
+        <file>HorusStyle/ComboBox.qml</file>
+        <file>HorusStyle/Dialog.qml</file>
+        <file>HorusStyle/ProgressBar.qml</file>
+        <file>HorusStyle/RadioButton.qml</file>
+        <file>HorusStyle/Slider.qml</file>
+        <file>HorusStyle/SplitView.qml</file>
+        <file>HorusStyle/TabButton.qml</file>
+        <file>HorusStyle/Text.qml</file>
+        <file>HorusStyle/TextField.qml</file>
+        <file>import/HorusTheme.qml</file>
+        <file>import/qmldir</file>
+    </qresource>
+</RCC>
