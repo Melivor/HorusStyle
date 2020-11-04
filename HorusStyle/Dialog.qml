@@ -11,7 +11,7 @@ T.Dialog {
     visible: true
     header:Rectangle{
         radius: HorusTheme.baseRadius
-        border.color: HorusTheme.borderColor
+        border.color: palette.mid
        // width: parent.width
         // color:"red"
         Text{
@@ -28,7 +28,7 @@ T.Dialog {
         width:dialog.width
         height: dialog.height
         radius: HorusTheme.baseRadius
-        border.color: HorusTheme.borderColor
+        border.color: palette.mid
 
     }
 

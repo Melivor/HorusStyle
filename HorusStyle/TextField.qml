@@ -19,6 +19,7 @@ T.TextField {
     bottomPadding: padding - 5
     verticalAlignment: TextInput.AlignVCenter
     placeholderTextColor: HorusTheme.textLightColor
+    onAccepted: focus=false
     PlaceholderText {
         id: placeholder
         //anchors.right:control.right
@@ -42,7 +43,7 @@ T.TextField {
         implicitHeight: 40
         border.width: control.activeFocus ? 2 : 1
         color: control.palette.base
-        border.color: control.activeFocus ? control.palette.highlight :control.palette.mid
+        border.color: control.activeFocus ?palette.highlight :palette.mid
         radius: HorusTheme.baseRadius
     }
 }

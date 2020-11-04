@@ -33,19 +33,25 @@ T.ComboBox {
             text:menuItem.text
             verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignHCenter
+            font:control.font
+            color:control.palette.text
+            topPadding: 4
+            leftPadding: 4 - control.padding
+            rightPadding: 4 - control.padding +imageIndicator.width
+            bottomPadding: 4
         }
-
-
     }
 
-    //    indicator: ColorImage {
-    //        x: control.mirrored ? control.padding : control.width - width - control.padding
-    //        y: control.topPadding + (control.availableHeight - height) / 2
-    //        color: control.editable ? control.palette.text : control.palette.buttonText
-    //        source: "qrc:/qt-project.org/imports/QtQuick/Controls.2/Fusion/images/arrow.png"
-    //        width: 20
-    //        fillMode: Image.Pad
-    //    }
+    indicator: ColorImage {
+        id:imageIndicator
+        x: control.mirrored ? control.padding +10: control.width - width - control.padding -10
+        y: control.topPadding + (control.availableHeight - height) / 2
+        color: control.editable ? control.palette.text : control.palette.buttonText
+        source: "qrc:/HorusStyle/icones/arrow@4x.png"
+        width: 15
+        height: 15
+        fillMode: Image.PreserveAspectFit
+    }
 
     contentItem: T.TextField {
         topPadding: 4
@@ -64,8 +70,8 @@ T.ComboBox {
 
         font: control.font
         color: control.editable ? control.palette.text : control.palette.buttonText
-        selectionColor: control.palette.highlight
-        selectedTextColor: control.palette.highlightedText
+        selectionColor:palette.highlight
+        selectedTextColor:palette.highlightedText
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
 
@@ -83,29 +89,29 @@ T.ComboBox {
                 y: 1
                 width: 1
                 height: parent.height - 2
-                color: HorusTheme.backgroundColor
+                color: palette.base
             }
         }
 
-        Rectangle {
-            x: 1 - control.leftPadding
-            y: 1
-            width: control.width - 2
-            height: control.height - 2
-            color: "transparent"
-            border.color: Color.transparent(HorusTheme.borderColor, 40 / 255)
-            visible: control.activeFocus
-            radius: 1.7
-        }
+//        Rectangle {
+//            x: 1 - control.leftPadding
+//            y: 1
+//            width: control.width - 2
+//            height: control.height - 2
+//            color: "transparent"
+//            border.color: Color.transparent(palette.mid, 40 / 255)
+//            visible: control.activeFocus
+//            radius: 1.7
+//        }
     }
 
     background: Rectangle{
-        color: HorusTheme.foregroundColor
+        color: palette.base
         implicitWidth: 150
         implicitHeight: 40
         radius: HorusTheme.baseRadius
         border.width: 0.5
-        border.color: hovered?HorusTheme.highlightedBorderColor:HorusTheme.borderColor
+        border.color: hovered?control.palette.highlight:palette.mid
     }
 
     popup: T.Popup {
@@ -120,81 +126,31 @@ T.ComboBox {
             id: highlight
             Rectangle {
                 width: 180; height: 40
-                border.color: HorusTheme.highlightedBorderColor
+                border.color:palette.highlight
                 radius: HorusTheme.baseRadius
                 //y: list.currentItem.y
             }
         }
+
         contentItem: ListView {
             clip: true
             implicitHeight: contentHeight
             model: control.delegateModel
+            //delegate: control.delegate
             currentIndex: control.highlightedIndex
-            highlightRangeMode: ListView.ApplyRange
             highlightMoveDuration: 0
+            highlightMoveVelocity: 0
+            highlightResizeDuration: 0
 
             T.ScrollBar.vertical: ScrollBar { }
             highlight:highlight
         }
 
         background: Rectangle {
-            color: HorusTheme.backgroundColor//control.popup.palette.window
-            border.color: HorusTheme.borderColor
+            color: palette.window//control.popup.palette.window
+            border.color: palette.mid
             radius: HorusTheme.baseRadius
 
         }
     }
 }
-
-//T.ComboBox{
-//    id:comboBox
-//   // font.bold: hovered?true:false
-//    property alias horizontalAlignement: text.horizontalAlignment
-//    implicitWidth:160
-//    implicitHeight:40
-//    leftPadding: 10
-//    //indicator.visible: enabled
-
-//    background: Rectangle{
-//        color: HorusTheme.foregroundColor
-//        //implicitHeight: 50
-//        radius: HorusTheme.baseRadius
-//        border.width: 0.5
-//        border.color: hovered?HorusTheme.highlightedBorderColor:HorusTheme.borderColor
-//    }
-
-//    contentItem:Item{
-
-//        Text{
-//            id:text
-//            width: parent.width
-//            height: parent.height
-//            verticalAlignment: Text.AlignVCenter
-//            horizontalAlignment: Text.AlignHCenter
-//            //anchors.centerIn: parent
-//            text:comboBox.displayText
-//            color: palette.text
-//        }
-//    }
-//    popup: Popup {
-//            y: comboBox.height +5
-//            width: comboBox.width
-//            implicitHeight: contentItem.implicitHeight
-//            padding: 1
-
-//            contentItem: ListView {
-//                clip: true
-//                implicitHeight: contentHeight
-//                model: comboBox.popup.visible ? comboBox.delegateModel : null
-//                currentIndex: comboBox.highlightedIndex
-
-//                ScrollIndicator.vertical: ScrollIndicator { }
-//            }
-
-//            background: Rectangle {
-//                border.color: HorusTheme.borderColor
-//                color:HorusTheme.foregroundColor
-//                radius: HorusTheme.baseRadius
-//            }
-//        }
-//}

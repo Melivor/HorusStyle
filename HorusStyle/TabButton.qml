@@ -17,7 +17,7 @@ T.TabButton{
     contentItem:Item{ Text{
         anchors.centerIn: parent
         text:tabButton.text
-        color:tabButton.checked?palette.text:HorusTheme.textLightColor
+        color:tabButton.checked?palette.text:palette.light
     }
     }
 
@@ -31,10 +31,10 @@ T.TabButton{
         ShapePath{
             //startX:tabButton.x
             startY: tabButton.height
-            fillColor: HorusTheme.foregroundColor
+            fillColor: palette.base
             startX: -tabButton.radius
-            //strokeWidth: 1
-            //strokeColor: "green"
+            strokeWidth: 0
+            strokeColor: "transparent"
             //strokeColor: "black"
             PathArc{
                 radiusX: tabButton.radius

@@ -16,7 +16,7 @@ T.Popup {
 
     background: Rectangle {
         color:"red"// control.palette.window
-        border.color: control.palette.mid
+        border.color: palette.mid
         radius: HorusTheme.baseRadius
     }
 

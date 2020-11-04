@@ -3,8 +3,8 @@ import QtQuick.Templates 2.12 as T
 import "../import"
 T.Slider {
     id:control
-    implicitWidth: orientation===Qt.Horizontal?150:15
-    implicitHeight: orientation===Qt.Vertical?150:15
+    implicitWidth: orientation===Qt.Horizontal?150:8
+    implicitHeight: orientation===Qt.Vertical?150:8
     handle: Rectangle{
         border.color: HorusTheme.accentColor
         x: control.leftPadding + (control.horizontal ? control.visualPosition * (control.availableWidth - width) : (control.availableWidth - width) / 2)

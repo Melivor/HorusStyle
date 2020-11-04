@@ -14,5 +14,10 @@
         <file>import/HorusTheme.qml</file>
         <file>import/qmldir</file>
         <file>HorusStyle/Popup.qml</file>
+        <file>HorusStyle/icones/arrow.svg</file>
+        <file>HorusStyle/icones/arrow@2x.png</file>
+        <file>HorusStyle/icones/arrow@3x.png</file>
+        <file>HorusStyle/icones/arrow@4x.png</file>
+        <file>HorusStyle/ButtonPanel.qml</file>
     </qresource>
 </RCC>
