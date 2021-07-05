@@ -6,7 +6,7 @@ import "../import"
 T.CheckBox {
     id: control
     implicitWidth: contentItem.width +padding*2
-    implicitHeight:implicitWidth
+    implicitHeight:25
     spacing: 5
     contentItem:
         Text {
@@ -23,7 +23,7 @@ T.CheckBox {
 
     indicator:
         Item{
-        x: control.text ? (control.mirrored ? control.width - width - control.rightPadding : control.leftPadding) : control.leftPadding + (control.availableWidth - width) / 2
+        x: control.text ? (control.mirrored ? control.width - width - control.rightPadding : control.leftPadding) : control.leftPadding //+ (control.availableWidth - width) / 2
         y: control.topPadding + (control.availableHeight - height) / 2
         implicitWidth: rect.implicitWidth + 4.4
         implicitHeight: rect.implicitHeight
@@ -42,9 +42,10 @@ T.CheckBox {
                     startX:rect.width*0.2
                     startY:rect.height*0.5
                     strokeWidth: 1.5
-                    strokeColor: HorusTheme.accentColor
+                    strokeColor: palette.mid
                     joinStyle: ShapePath.RoundJoin
                     capStyle: ShapePath.RoundCap
+                    fillColor: "transparent"
                     PathLine{
                         relativeX: rect.width*0.4
                         relativeY: rect.height*0.4

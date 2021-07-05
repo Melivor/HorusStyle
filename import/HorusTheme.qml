@@ -2,7 +2,7 @@ pragma Singleton
 import QtQuick 2.12
 
 QtObject{
-    property int baseRadius: 5
+    property int baseRadius: 0
     property color backgroundColor: Qt.hsla(0,0,250/255,1)
     property color foregroundColor: "white"
     property color emptyColor: "#e6e6e6"
